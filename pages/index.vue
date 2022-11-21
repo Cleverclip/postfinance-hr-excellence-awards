@@ -68,7 +68,7 @@ export default {
       if (this.$route.query.slide) {
         this.activeSlide = parseInt(this.$route.query.slide)
       } else {
-        this.activeSlide = 1  
+        this.activeSlide = 1
       }
 
     }, 300)
@@ -100,6 +100,10 @@ export default {
     position: absolute
     top: 0
     left: 0
+    #unfold-bottom,
+    #unfold-top
+      transform: translate(0)
+      transition: $t
     &.part2
       #part1
         opacity: 0
@@ -133,6 +137,12 @@ export default {
       transform: translate(0, 130%) scale(.8) skewY(12deg)
     &.active
       transform: translate(0) scale(1)
+      #unfold-bottom
+        transform: translate(0, 40%)
+        transition: $tt .3s
+      #unfold-top
+        transform: translate(0, -40%)
+        transition: $tt .3s
       #spin-in
         transform: rotate(0deg) scale(1)
         transition: $tt .2s
@@ -172,6 +182,10 @@ export default {
 
 @for $i from 1 through 25
   .illustration
+    #unfold-bottom_#{$i},
+    #unfold-top_#{$i}
+      transform: translate(0)
+      transition: $t
     #star_#{$i}
       animation: star 4s ease infinite
       animation-delay: calc(-.2s * #{$i})
@@ -205,6 +219,12 @@ export default {
     #text-appear_#{$i}
       opacity: 1
       transition: $t calc(.6s + .1s * #{$i})
+    #unfold-bottom_#{$i}
+      transform: translate(0, 40%)
+      transition: $tt calc(.7s - .2s * #{$i})
+    #unfold-top_#{$i}
+      transform: translate(0, -40%)
+      transition: $tt calc(.7s - .2s * #{$i})
 
 
 

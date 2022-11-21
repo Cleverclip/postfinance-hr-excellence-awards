@@ -762,9 +762,9 @@
 <stop stop-color="#FF8CBB"/>
 <stop offset="1" stop-color="#FF8CBB" stop-opacity="0"/>
 </linearGradient>
-<linearGradient id="paint45_linear_1_550" x1="211.8" y1="1391.3" x2="643.9" y2="959.2" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint45_linear_1_550" x1="409.721" y1="847.893" x2="409.721" y2="1085.89" gradientUnits="userSpaceOnUse">
 <stop/>
-<stop offset="1" stop-color="#301948"/>
+<stop offset="1" stop-color="#301948" stop-opacity="0"/>
 </linearGradient>
 <linearGradient id="paint46_linear_1_550" x1="132.401" y1="357.508" x2="171.023" y2="332.522" gradientUnits="userSpaceOnUse">
 <stop stop-color="#0980AB"/>
