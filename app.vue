@@ -1,21 +1,18 @@
 <template>
   <div>
-    <Navigation />
     <NuxtPage />
-    <Footer />
   </div>
 </template>
 <script setup>
   const appConfig = useAppConfig()
 </script>
-<style>
-  .page-enter-active,
-  .page-leave-active {
-    transition: all 0.4s;
-  }
-  .page-enter-from,
-  .page-leave-to {
-    opacity: 0;
-    filter: blur(1rem);
-  }
+<style lang="sass">
+.page-enter-active,
+.page-leave-active
+  transition: all .4s cubic-bezier(.6, 0, .4, 0)
+.page-enter-from
+  filter: blur(1rem)
+.page-leave-to
+  filter: blur(1rem)
+
 </style>

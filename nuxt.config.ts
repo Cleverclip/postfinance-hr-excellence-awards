@@ -1,8 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxt/image-edge"],
+  modules: ["@nuxt/image-edge", "nuxt-svgo"],
   app: {
-    pageTransition: { name: "page", mode: "out-in" },
+    pageTransition: { name: "page", mode: "default" },
   },
   css: ["@/assets/styles/typography.sass"],
   vite: {
@@ -14,4 +14,24 @@ export default defineNuxtConfig({
       },
     },
   },
+  svgo: {
+    svgoConfig: {
+      multipass: true,
+      plugins: [
+        {
+          name: 'preset-default',
+          params: {
+            overrides: {
+              cleanupIDs: false,
+              collapseGroups: false,
+              removeViewBox: false,
+              convertPathData: false,
+              removeUnknownsAndDefaults: false,
+
+            }
+          }
+        }
+      ]
+    }
+  }
 });
